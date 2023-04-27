@@ -1,0 +1,271 @@
+{% load static %}
+
+{% comment %} <div>answer</div>
+<div>"{{dbmyname}}"</div>
+<div>"{{dblname}}"</div>
+<div>"{{dbemail}}"</div>
+<div>"{{dbno}}"</div> 
+<div>"{{dbemail}}"</div>
+<div>"{{dbcompany}}"</div>
+<div>"{{dbindtext}}"</div>
+<div>"{{dbprotext}}"</div>
+<div>"{{dbcomments}}"</div>
+</body>
+</html>  {% endcomment %}
+
+{% comment %} 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<title>Jonathan Doe | Web Designerss, Director | name@yourdomain.com</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="{% static 'resume.css' %}" media="all" />
+
+</head> {% endcomment %}
+<body>
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <!-- <div>
+            <img src="favicon.ico" alt="logo">
+        </div> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+    
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type ="text/css" href="{% static 'design.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'resume.css' %}" media="all" />
+
+        <title>Resume Builder</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    
+    </head>
+    
+    <body id="top">
+    
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menue-items">
+                    {% comment %} "active" {% endcomment %}
+                    
+                    {% comment %} {{request.path}} {% endcomment %}
+                    <li class= "{% if request.path == '' %} active {% endif %}" > <a href="/home">Home</a></li>
+                    <li class= "{% if request.path == '/about' %} active {% endif %}"><a href="/about">About</a></li>
+                    <li class= "{% if request.path == '/temps' %} active {% endif %}"><a href="/temps">Templates</a></li>
+                    <li class= "{% if request.path == '/tempmenu' %} active {% endif %}"><a href="/tempmenu">Template-Menu</a></li>
+                    <li class= "{% if request.path == '/form' %} active {% endif %}"><a href="/form">Info-Form</a></li>
+                    <li class= "{% if request.path == '/resume' %} active {% endif %}"><a href="/resume">Resume</a></li>
+                    <li class= "{% if request.path == '/base' %} active {% endif %}"><a href="/base">Base</a></li>
+                    <li class= "{% if request.path == '/contact' %} active {% endif %}"><a href="/contact">Contact</a></li>
+                </ul>
+                <h1 class="logo">RB</h1>
+            </div>
+        </nav>  
+    
+<div id="doc2" class="yui-t7">
+	<div id="inner">
+	
+		<div id="hd">
+			<div class="yui-gc">
+				<div class="yui-u first">
+					<h1>{{dbmyname}}</h1>
+					<h2>Web Designer, Director</h2>
+				</div>
+
+				<div class="yui-u">
+					<div class="contact-info">
+						<h3><a id="pdf" href="#">Download PDF</a></h3>
+						<h3><a href="mailto:name@yourdomain.com">{{dbemail}}</a></h3>
+						<h3>{{dbno}}</h3>
+					</div><!--// .contact-info -->
+				</div>
+			</div><!--// .yui-gc -->
+		</div><!--// hd -->
+
+		<div id="bd">
+			<div id="yui-main">
+				<div class="yui-b">
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Profile</h2>
+						</div>
+						<div class="yui-u">
+							<p class="enlarge">
+								Progressively evolve cross-platform ideas before impactful infomediaries. Energistically visualize tactical initiatives before cross-media catalysts for change. 
+							</p>
+						</div>
+					</div><!--// .yui-gf -->
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Skills</h2>
+						</div>
+						<div class="yui-u">
+
+								<div class="talent">
+									<h2>Web Design</h2>
+									<p>Assertively exploit wireless initiatives rather than synergistic core competencies.	</p>
+								</div>
+
+								<div class="talent">
+									<h2>Interface Design</h2>
+									<p>Credibly streamline mission-critical value with multifunctional functionalities.	 </p>
+								</div>
+
+								<div class="talent">
+									<h2>Project Direction</h2>
+									<p>Proven ability to lead and manage a wide variety of design and development projects in team and independent situations.</p>
+								</div>
+						</div>
+					</div><!--// .yui-gf -->
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Technical</h2>
+						</div>
+						<div class="yui-u">
+							<ul class="talent">
+								<li>XHTML</li>
+								<li>CSS</li>
+								<li class="last">Javascript</li>
+							</ul>
+
+							<ul class="talent">
+								<li>Jquery</li>
+								<li>PHP</li>
+								<li class="last">CVS / Subversion</li>
+							</ul>
+
+							<ul class="talent">
+								<li>OS X</li>
+								<li>Windows XP/Vista</li>
+								<li class="last">Linux</li>
+							</ul>
+						</div>
+					</div><!--// .yui-gf-->
+
+					<div class="yui-gf">
+	
+						<div class="yui-u first">
+							<h2>Experience</h2>
+						</div><!--// .yui-u -->
+
+						<div class="yui-u">
+
+							<div class="job">
+								<h2>Facebook</h2>
+								<h3>Senior Interface Designer</h3>
+								<h4>2005-2007</h4>
+								<p>Intrinsicly enable optimal core competencies through corporate relationships. Phosfluorescently implement worldwide vortals and client-focused imperatives. Conveniently initiate virtual paradigms and top-line convergence. </p>
+							</div>
+
+							<div class="job">
+								<h2>Apple Inc.</h2>
+								<h3>Senior Interface Designer</h3>
+								<h4>2005-2007</h4>
+								<p>Progressively reconceptualize multifunctional "outside the box" thinking through inexpensive methods of empowerment. Compellingly morph extensive niche markets with mission-critical ideas. Phosfluorescently deliver bricks-and-clicks strategic theme areas rather than scalable benefits. </p>
+							</div>
+
+							<div class="job">
+								<h2>Microsoft</h2>
+								<h3>Principal and Creative Lead</h3>
+								<h4>2004-2005</h4>
+								<p>Intrinsicly transform flexible manufactured products without excellent intellectual capital. Energistically evisculate orthogonal architectures through covalent action items. Assertively incentivize sticky platforms without synergistic materials. </p>
+							</div>
+
+
+							<div class="job last">
+								<h2>International Business Machines (IBM)</h2>
+								<h3>Lead Web Designer</h3>
+								<h4>2001-2004</h4>
+								<p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely e-markets.</p>
+							</div>
+
+						</div><!--// .yui-u -->
+					</div><!--// .yui-gf -->
+
+
+					<div class="yui-gf last">
+						<div class="yui-u first">
+							<h2>Education</h2>
+						</div>
+						<div class="yui-u">
+							<h2>Indiana University - Bloomington, Indiana</h2>
+							<h3>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </h3>
+						</div>
+					</div><!--// .yui-gf -->
+
+
+				</div><!--// .yui-b -->
+			</div><!--// yui-main -->
+		</div><!--// bd -->
+
+		<div id="ft">
+			<p>Jonathan Doe &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) - 867-5309</p>
+		</div><!--// footer -->
+
+	</div><!-- // inner -->
+
+
+</div><!--// doc -->
+<!-- <form method = "get" action="#" >
+    {% csrf_token %}
+    <div>
+        <button name ="genratepdf" value="myvalue" type="submit" class="btn btn-success btn-lg mx-5 my-4">Genrate PDF</button>
+    </div>
+</form> -->
+	{% comment %} <div>
+		<button  class="download" name ="genratepdf" value="myvalue" type="submit" class="btn btn-success btn-lg mx-5 my-4">Genrate PDF</button>
+	</div> {% endcomment %}
+	<div>
+        <button href="javascript:generatePDF()" name ="genratepdf" id="myid" value="myvalue" type="submit" class="btn btn-success btn-lg mx-5 my-4 download">Genrate PDF</button>
+    </div>
+<script>
+
+	let div1=document.querySelector(".yui-t7");
+	let btn1=document.querySelector(".download");
+	btn1.addEventListener('click',()=>
+	{
+		/* <style>
+			.navbar{
+				display:none
+			}
+
+		</style> */
+		window.print();
+	})
+
+	 
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+</body>
+</html>
+

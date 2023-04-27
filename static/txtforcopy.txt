@@ -1,0 +1,17 @@
+	async function generatePDF () {
+		document.getElementById("myid").innerHTML = "Currently downloading, please wait";
+		//Downloading
+		var downloading = document.getElementById("doc2");
+		var doc=new jsPDF('p','pt');
+		await html2canvas (downloading,{
+			//allowTaint: true,
+			//seCORS: true,
+			width: 550
+			}).then((canvas) => {
+			//Canvas (convert to PNG)
+			doc.addImage (canvas.toDataURL("image/png"), 'PNG', 5, 5, 500, 500);
+			})
+			doc.save("Document.pdf");
+		//End of downloading
+		document.getElementById("myid").innerHTML = "Click to download";
+	}

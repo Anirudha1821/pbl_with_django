@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static %}               
+
+
+  
+
+
+<!-- Here we have to methods>
+by load static 
+or by /static  -->
+
+<!-- For loading static folder files...we can directly use static/ for all images,css,js.....no %%static%%  -->
+
+{% block content %}
+
+
+    <section class="showcase-area" id="Showcase">
+        <div class="showcase-container">
+            <h1 class="main-tittle">Create a resume to land your next job</h1>
+            <p>The Ultimate Resume Builder</p>
+            <a style="font-size: 12px;" href="#Template-Menu" class="btn btn-primary">Menu</a>
+        </div>
+    </section>
+    <section id="About">
+        <div class="about-wraper container">
+            <div class="about-text">
+                <p style=" font-weight: bolder;"class="small">About Us</p>
+                <h2>We've been making healthy Template for last 10 years</h2>
+                <p>Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes. Increase your interview chances and rise above the competition.</p>
+            </div>
+            <div class="about-img">
+                <img src="{% static './Images/2.jpg'%}" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Template">
+        <h2 style=" font-weight: bolder;">Types of Templates</h2>
+        <div class="row">
+        <div class="Template-container container">
+            <div class="Template-type fruits col">
+                <div class="img-container">
+                    <img src="{% static './Images/img.jpg'%}" alt="Fruit image">
+                    <div class="img-content">
+                        <h3>Template_1</h3>
+                        <a href="#" class="btn btn-primary" target="_blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Template-type vegetables col">
+                <div class="img-container">
+                    <img src="{% static './Images/igm2.jpg'%}" alt="Fruit image">
+                    <!-- <img id="4" src="./4.jpeg" alt="Vegetable Image"> -->
+                    <div class="img-content">
+                        <h3>Template_2</h3>
+                        <a href="#" class="btn btn-primary" target="_blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Template-type grains col">
+                <div class="img-container">
+                    <img src="{% static './Images/img4.webp'%}" alt="Fruit image">
+                    <!-- <img src="./Images/5.jpeg" alt="Grains Image"> -->
+                    <div class="img-content">
+                        <h3>Template_3</h3>
+                        <a href="#" class="btn btn-primary" target="_blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="Template-Menu">'
+        <h2 style="font-weight: 500;"class="Template-menu-heading">Template Menu</h2>
+        <div class="Template-menu-container container">
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/6.jpeg'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">Graphic</h2>
+                    <p>The Graphic template is an excellent CV for the contemporary job seeker. It showcases skills and experience</p>
+                    <!-- <p class="Template-price">Price: &#8377; 299 </p> -->
+                </div>
+            </div>
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/7.jpeg'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">Coporate</h2>
+                    <p>The Coporate template is an excellent CV for the contemporary job seeker. It showcases skills and experience.
+
+                    </p>
+                    <!-- <p class="Template-price">Price: &#8377; 399</p> -->
+                </div>
+            </div>
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/8.webp'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">social</h2>
+                    <p>The Social template is an excellent CV for the contemporary job seeker. It showcases skills and experience.</p>
+                    <!-- <p class="Template-price">Price: &#8377; 169</p> -->
+                </div>
+            </div>
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/9.jpg'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">Tim</h2>
+                    <p>The Tim template is an excellent CV for the contemporary job seeker. It showcases skills and experience.</p>
+                    <!-- <p class="Template-price">Price: &#8377; 199</p> -->
+                </div>
+            </div>
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/10.jpg'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">Template menu-item5</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, quia.</p>
+                    <!-- <p class="Template-price">Price: &#8377; 249</p> -->
+                </div>
+            </div>
+            <div class="Template-items">
+                <div class="Template-image">
+                    <img src="{% static './Images/2.jpg'%}" alt="Template-Menu">
+                </div>
+                <div class="Template-description">
+                    <h2 class="Template-tittle">Template menu-item6</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, quia.</p>
+                    <!-- <p class="Template-price">Price: &#8377; 179</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="Resume">
+        <h2  class="Resume-tittle">What our Website User Says?</h2>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <div class="Resume-box">
+                <div class="star-rating">
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                </div>
+                <p class="Resume-text">I have been searching everywhere for a free template and have been going mad! Finally came across this website and was able to get it done in minutes! Highly recommend!</p>
+                <div class="customer-detail">
+                    <div class="customer-photo"><img src="{% static './Images/img11.jpeg'%}" alt=""></div>
+                    <p class="customer-name">Jhon doe</p>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="Resume-box">
+                <div class="star-rating">
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                </div>
+                <p class="Resume-text">Fabulous, made the process very efficient and easy along with free advertisement on what to say in each section. Would recommend</p>
+                <div class="customer-detail">
+                    <div class="customer-photo"><img src="{% static './Images/img7.jpeg'%}" alt=""></div>
+                    <p class="customer-name">Peter doe</p>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="Resume-box">
+                <div class="star-rating">
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked "></span>
+                </div>
+                <p class="Resume-text">This is very nice but the problem is it does not contain all the information I have on my recent resume such as parts where I have to enter reference details. Only few information can be added on it</p>
+                <div class="customer-detail">
+                    <div class="customer-photo"><img src="{% static './Images/img9.jpeg'%}" alt=""></div>
+                    <p class="customer-name">Bob doe</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="{% static './Images/2.jpg'%}" alt="Contact Image">
+            </div>
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <input type="text" name="" id="" placeholder="Name">
+                <input type="email" name="" id="" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="type your message here"></textarea>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer id="footer">
+        <h2>Resume Builder website &copy; all rights reserved.</h2>
+    </footer>
+
+
+
+
+    
+    <!--code for smooth scroling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+{% comment %} {% include "footer.html" %} {% endcomment %}
+{% endblock  %} 
