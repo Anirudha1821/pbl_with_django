@@ -2,10 +2,10 @@ from django.shortcuts import render,HttpResponse,HttpResponseRedirect,redirect
 from resumeb.models import Forms
 # above is imp 
 from django.contrib import messages
-from .pdf import genrate
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import logout
+from django.contrib.auth import login
 
 
 
@@ -33,7 +33,7 @@ def about(request):
         if request.method =="POST":   
             dbmyname=(request.POST.get('myname'))
             dblname=(request.POST.get('lname'))
-            dbno=int(request.POST.get('no'))
+            dbno=(request.POST.get('no'))
             dbemail=(request.POST.get('email'))
             dbcompany=(request.POST.get('company'))
             dbindtext=(request.POST.get('indtext'))
@@ -86,9 +86,19 @@ def about(request):
 def temps(request):
     return render(request,'tempmenu.html')
 def contact (request):
+    if request.user.is_anonymous:
+        return redirect("/login")
     return render(request,'contact.html')
 def base(request):
     return render(request,'base.html')
+def newform(request):
+    return render(request,'newform.html')
+def newform1(request):
+    return render(request,'newform1.html')
+def newform2(request):
+    return render(request,'newform2.html')
+def newform3(request):
+    return render(request,'newform3.html')
 def resume(request):
     return render(request,'resume.html')
 def tempmenu(request):
@@ -97,7 +107,7 @@ def home(request):
     return render(request,'index.html')
 def form_1(request):
     return render(request,'form_1.html')
-def login(request):
+def loginUser(request):
 #     >>> user = User.objects.create_user("john", "lennon@thebeatles.com", "johnpassword")
 
     # # At this point, user is a User object that has already been saved
@@ -115,14 +125,15 @@ def login(request):
             loginpassword  = request.POST.get('loginpassword')
             # print(loginname)
             # print(loginpassword)
-            user = authenticate(username='loginname',password="loginpassword")
+            user = authenticate(username=loginname,password=loginpassword)
             if user is not None:
-                return redirect('form.html')
+                login(request,user)
+                return redirect('/contact')
             else:
-                return render(request,'form.html')
+                return render(request,'login.html')
     except:
         pass
-    return render(request,'form.html')
+    return render(request,'login.html')
 
         
            
@@ -130,8 +141,8 @@ def logoutUser(request):
     logout(request)
     return redirect("/login")
 def form(request):
-    if request.user.is_anonymous:
-        return redirect("/login")
+    # if request.user.is_anonymous:
+    #     return redirect("/login")
     formsData=Forms.objects.all()
     # for a in formsData:
     #     print(a.myname)
