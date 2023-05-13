@@ -1,0 +1,23 @@
+body{
+    background-color: #3A4750;
+}
+
+.templates{
+    position: relative;
+    margin-left: 50px;
+}
+
+.card{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+
+.cardimg{
+    height: 250px;
+}
+
+.row{
+    margin-top: 50px;
+}

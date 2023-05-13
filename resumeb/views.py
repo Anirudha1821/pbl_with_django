@@ -141,7 +141,7 @@ def tempmenu(request):
             'mdpincode': mdpincode,
         }
         print(mdata)
-    return render(request, 'newform.html', mdata)
+    return render(request, 'tempmenu.html', mdata)
 
 
 def submitf(request):
