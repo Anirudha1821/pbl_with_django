@@ -23,14 +23,15 @@
             Start with your most recent experience and work backward.
         </div>
       </div>
-      <form action="#" class="form">
+      <form action="/tempmenu" method="post" class="form">
+        {% csrf_token %}
         <div class="introtext">
           Experience-A
       </div>
         <div class="input-box row post">
         <div class="col-6 post">
           <label>What was your Position</label>
-          <input name="dtitle" type="text" placeholder="Similar to job title that bext describes the work you did" required />
+          <input name="dposition" type="text" placeholder="Similar to job title that bext describes the work you did" required />
         </div>
         <div class="col-6 surname">
           <label>Who did you do this for ?</label>
@@ -41,11 +42,11 @@
       <div class="input-box row address">
         <div class="col-6 city ">
           <label>City</label>
-          <input name="d" type="text" placeholder="e.g. New Delhi" required />
+          <input name="dc1" type="text" placeholder="e.g. New Delhi" required />
         </div>
         <div class="col-6 country">
           <label>Country</label>
-          <input name="d" type="text" placeholder="e.g. India" required />
+          <input name="dcc1" type="text" placeholder="e.g. India" required />
         </div>
       </div>
 
@@ -53,18 +54,18 @@
         <div class="col-md-4 startDate " style="
         margin-top: 25px ">
           <label>Start Date</label>
-          <input name="d" type="month" placeholder="Month">
+          <input name="dm1" type="month" placeholder="Month">
         </div>
 
         <div class="col-md-4 offset-md-4 endDate " style="
         margin-top: 25px ">
           <label>End Date</label>
-          <input name="d" type="month" placeholder="Month">
+          <input name="dm2" type="month" placeholder="Month">
         </div>
       </div>
       {% comment %} --------------------------------------- {% endcomment %}
       <hr>
-      <div class="introtext">
+      {% comment %} <div class="introtext">
         Experience-B
     </div>
       <div class="input-box row post">
@@ -101,7 +102,7 @@
           <label>End Date</label>
           <input name="d" type="month" placeholder="Month">
         </div>
-      </div>
+      </div> {% endcomment %}
       <div class="row buttons">
         <div class="col-md-4 prev">
           <button><a href="/newform1">previous</a></button>
@@ -110,9 +111,9 @@
         <div class="col-md-4 offset-md-4 next">
           <button><a href="/newform3">Next</a></button>
         </div>
-
-       
       </div>
+      
+  
         
       </form>
     </section>

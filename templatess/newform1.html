@@ -31,7 +31,8 @@
           student or did not graduate.
         </div>
       </div>
-      <form action="#" class="form">
+      <form action="/submitf" method="post" class="form">
+        {% csrf_token %}
         <div class="data" id="data">
         <div class="input-box row names">
           <div class="col-6 sclname">
@@ -67,6 +68,11 @@
         </div>
 
        
+      </div>
+      <div class="col-12">
+        <button class="btn buttonForm" type="submit">
+          Submit
+        </button>
       </div>
       </form>
     </section>

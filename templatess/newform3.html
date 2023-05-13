@@ -28,7 +28,8 @@
                 We’ll help you choose the best ones.
             </div>
         </div>
-        <form action="#" class="form">
+        <form action="/tempmenu" method="#" class="form">
+            {% csrf_token %}
             <div class="data" id="data">
                 <div class="input-box row frameworks">
                     <label class="skill_title">Frameworks</label>
