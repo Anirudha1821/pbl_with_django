@@ -9,17 +9,12 @@ from django.contrib.auth import logout
 from django.contrib.auth import login
 
 
-# Create your views here.
 def indexreq(request):
-    # return HttpResponse("This is home page")
-
     return render(request, 'index.html')
 
 
 def mytemp(request):
-
     # return HttpResponse("This is home page")
-
     return render(request, 'mytemp.html')
 
 
@@ -36,112 +31,12 @@ def contact(request):
         return redirect("/login")
     return render(request, 'contact.html')
 
-
 def base(request):
     return render(request, 'base.html')
 
-
 def tempmenu(request):
 
-    mdata = {}
-    # formsData=F.objects.all()
-    # for a in formsData:
-    #     print(a.myname)
-
-    # if request.method == "POST":
-    #     print("dsuhufdsfsffd")
-    #     mdname = (request.POST.get('dname'))
-    #     mdsurname = (request.POST.get('dsurname'))
-    #     mdphoneno = (request.POST.get('dphoneno'))
-    #     mdemail = (request.POST.get('demail'))
-    #     mdcompany = (request.POST.get('dcompany'))
-    #     mdcountry = (request.POST.get('dcountry'))
-    #     mdcity = (request.POST.get('dcity'))
-    #     mdschool = (request.POST.get('dschool'))
-    #     mdcollege = (request.POST.get('dcollege'))
-    #     mddegree = (request.POST.get('ddegree'))
-    #     mdmonth = (request.POST.get('dmonth'))
-    #     mdposition = (request.POST.get('dposition'))
-    #     mdc1 = (request.POST.get('dc1'))
-    #     mdcc1 = (request.POST.get('dcc1'))
-    #     mdm1 = (request.POST.get('dm1'))
-    #     mdm2 = (request.POST.get('dm2'))
-    #     mdpincode = (request.POST.get('dpincode'))
-    #     mdata = {
-    #         'mdname': mdname,
-    #         'mdsurname': mdsurname,
-    #         'mdphoneno': mdphoneno,
-    #         'mdemail': mdemail,
-    #         'mdcompany': mdcompany,
-    #         'mdcountry': mdcountry,
-    #         'mdcity': mdcity,
-    #         'mdschool': mdschool,
-    #         'mdcollege': mdcollege,
-    #         'mddegree': mddegree,
-    #         'mdmonth': mdmonth,
-    #         'mdposition': mdposition,
-    #         'mdc1': mdc1,
-    #         'mdcc1': mdcc1,
-    #         'mdcc1': mdcc1,
-    #         'mdm1': mdm1,
-    #         'mdm2': mdm2,
-    #         'mdpincode': mdpincode,
-    #     }
-
-    # if  request.POST.get("genratepdf"):
-    #     pdf=genrate(about.html)
-    #     return HttpResponse(pdf,content_type="application/pdf")
-    # else:
-    #     return render(request,'about.html',data)
-
-    # return render(request, 'tempmenu.html', mdata)
-
-    mdata = {}
-    # formsData=F.objects.all()
-    # for a in formsData:
-    #     print(a.myname)
-
-    if request.method == "POST":
-        print("dsuhufdsfsffd")
-        mdname = (request.POST.get('dname'))
-        mdsurname = (request.POST.get('dsurname'))
-        mdphoneno = (request.POST.get('dphoneno'))
-        mdemail = (request.POST.get('demail'))
-        mdcompany = (request.POST.get('dcompany'))
-        mdcountry = (request.POST.get('dcountry'))
-        mdcity = (request.POST.get('dcity'))
-        mdschool = (request.POST.get('dschool'))
-        mdcollege = (request.POST.get('dcollege'))
-        mddegree = (request.POST.get('ddegree'))
-        mdmonth = (request.POST.get('dmonth'))
-        mdposition = (request.POST.get('dposition'))
-        mdc1 = (request.POST.get('dc1'))
-        mdcc1 = (request.POST.get('dcc1'))
-        mdm1 = (request.POST.get('dm1'))
-        mdm2 = (request.POST.get('dm2'))
-        mdpincode = (request.POST.get('dpincode'))
-        mdata = {
-            'mdname': mdname,
-            'mdsurname': mdsurname,
-            'mdphoneno': mdphoneno,
-            'mdemail': mdemail,
-            'mdcompany': mdcompany,
-            'mdcountry': mdcountry,
-            'mdcity': mdcity,
-            'mdschool': mdschool,
-            'mdcollege': mdcollege,
-            'mddegree': mddegree,
-            'mdmonth': mdmonth,
-            'mdposition': mdposition,
-            'mdc1': mdc1,
-            'mdcc1': mdcc1,
-            'mdcc1': mdcc1,
-            'mdm1': mdm1,
-            'mdm2': mdm2,
-            'mdpincode': mdpincode,
-        }
-        print(mdata)
-    return render(request, 'tempmenu.html', mdata)
+    return render(request, 'tempmenu.html')
 
 
 def submitf(request):
@@ -228,8 +123,8 @@ def newform(request):
         dm1 = (request.POST.get('dm1'))
         dm2 = (request.POST.get('dm2'))
         myF = F(dname=dname, dsurname=dsurname, dphoneno=dphoneno, demail=demail,
-                dcountry=dcountry, dcity=dcity, desc=desc, dpincode=dpincode,dschool=dschool, dcollege=dcollege,
-                ddegree=ddegree, dmonth=dmonth,dposition=dposition, dc1=dc1, dcc1=dcc1, dm1=dm1, dm2=dm2,dcompany=dcompany)
+                dcountry=dcountry, dcity=dcity, desc=desc, dpincode=dpincode, dschool=dschool, dcollege=dcollege,
+                ddegree=ddegree, dmonth=dmonth, dposition=dposition, dc1=dc1, dcc1=dcc1, dm1=dm1, dm2=dm2, dcompany=dcompany)
         myF.save()
         messages.success(request, "Your form submitted succesfully.")
         mdname = (request.POST.get('dname'))
@@ -270,6 +165,7 @@ def newform(request):
             'mdm1': mdm1,
             'mdm2': mdm2,
         }
+        print(mdata)
 
     return render(request, 'newform.html', mdata)
 
@@ -388,6 +284,8 @@ def form(request):
 
 def form_1(request):
     return render(request, 'form_1.html')
+
+
 def rat(request):
     return render(request, 'rat.html')
 

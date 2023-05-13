@@ -121,49 +121,49 @@
           We suggest including an email and phone number.
         </div>
       </div>
-
+     
         <div class="input-box row names">
         <div class="col-6 firstname">
           <label>First Name</label>
-          <input name="dname" type="text" placeholder="Enter first name"  />
+          <input name="dname" type="text" placeholder="Enter first name" required />
         </div>
         <div class="col-6 surname">
           <label>Surname</label>
-          <input name="dsurname" type="text" placeholder="Enter surname"  />
+          <input name="dsurname" type="text" placeholder="Enter surname" required />
         </div>
       </div>
 
       <div class="input-box row address">
         <div class="col-4 city ">
           <label>City</label>
-          <input name="dcity" type="text" placeholder="e.g. New Delhi"  />
+          <input name="dcity" type="text" placeholder="e.g. New Delhi" required />
         </div>
         <div class="col-4 country">
           <label>Country</label>
-          <input name="dcountry" type="text" placeholder="e.g. India"  />
+          <input name="dcountry" type="text" placeholder="e.g. India" required />
         </div>
 
         <div class="col-4 pincode" >
           <label>Pin-Code</label>
-          <input name="dpincode" type="text" placeholder="e.g. 411043"  />
+          <input name="dpincode" type="text" placeholder="e.g. 411043" required />
         </div>
       </div>
 
       <div class="input-box row contact">
         <div class="col-6 phonenum">
           <label>Phone</label>
-          <input name="dphoneno" type="text" placeholder="Enter phone number"  />
+          <input name="dphoneno" type="text" placeholder="Enter phone number" required />
         </div>
         <div class="col-6 email">
           <label>Email</label>
-          <input name="demail" type="text" placeholder="Enter email"  />
+          <input name="demail" type="text" placeholder="Enter email" required />
         </div>
       </div>
 
       <div class="input-box row desc">
         <div class="col-6 desc">
           <label>Short Description</label>
-          <input name="desc" type="desc" placeholder="Enter Description"  />
+          <input name="desc" type="desc" placeholder="Enter Description" required />
         </div>
       </div>
 
@@ -186,18 +186,18 @@
           <div class="input-box row names">
             <div class="col-6 sclname">
               <label>School Name</label>
-              <input name="dschool" type="text" placeholder="Enter school name"  />
+              <input name="dschool" type="text" placeholder="Enter school name" required />
             </div>
             <div class="col-6 scl_loc">
               <label>College Name</label>
-              <input name="dcollege" type="text" placeholder="Enter College name"  />
+              <input name="dcollege" type="text" placeholder="Enter College name" required />
             </div>
           </div>
   
           <div class="input-box row">
             <div class="col-6 degree">
               <label>Degree</label>
-              <input name="ddegree" type="text" placeholder="Enter Degree"  />
+              <input name="ddegree" type="text" placeholder="Enter Degree" required />
             </div>
             <div class="col-6 graduatedate">
               <label>Graduation Date</label>
@@ -232,22 +232,22 @@
           <div class="input-box row post">
           <div class="col-6 post">
             <label>What was your Position</label>
-            <input name="dposition" type="text" placeholder="Similar to job title that bext describes the work you did"  />
+            <input name="dposition" type="text" placeholder="Similar to job title that bext describes the work you did" required />
           </div>
           <div class="col-6 surname">
             <label>Who did you do this for ?</label>
-            <input name="dcompany" type="text" placeholder="Person,Organisation,company or family you worked for "  />
+            <input name="dcompany" type="text" placeholder="Person,Organisation,company or family you worked for " required />
           </div>
         </div>
   
         <div class="input-box row address">
           <div class="col-6 city ">
             <label>City</label>
-            <input name="dc1" type="text" placeholder="e.g. New Delhi"  />
+            <input name="dc1" type="text" placeholder="e.g. New Delhi" required />
           </div>
           <div class="col-6 country">
             <label>Country</label>
-            <input name="dcc1" type="text" placeholder="e.g. India"  />
+            <input name="dcc1" type="text" placeholder="e.g. India" required />
           </div>
         </div>
   
@@ -272,22 +272,22 @@
         <div class="input-box row post">
           <div class="col-6 post">
             <label>What was your Position</label>
-            <input name="dtitle" type="text" placeholder="Similar to job title that bext describes the work you did"  />
+            <input name="dtitle" type="text" placeholder="Similar to job title that bext describes the work you did" required />
           </div>
           <div class="col-6 surname">
             <label>Who did you do this for ?</label>
-            <input name="dcompany" type="text" placeholder="Person,Organisation,company or family you worked for "  />
+            <input name="dcompany" type="text" placeholder="Person,Organisation,company or family you worked for " required />
           </div>
         </div>
   
         <div class="input-box row address">
           <div class="col-6 city ">
             <label>City</label>
-            <input name="d" type="text" placeholder="e.g. New Delhi"  />
+            <input name="d" type="text" placeholder="e.g. New Delhi" required />
           </div>
           <div class="col-6 country">
             <label>Country</label>
-            <input name="d" type="text" placeholder="e.g. India"  />
+            <input name="d" type="text" placeholder="e.g. India" required />
           </div>
         </div> -->
   
@@ -309,14 +309,11 @@
             <button>Previous</button>
           </div>
   
-          {% comment %} <div class="col-md-4 offset-md-4 next">
-            <button>Next</button>
+          <div class="col-12">
+            <button class="btn buttonForm" type="submit">
+              Submit
+            </button>
           </div>
-        </div> {% endcomment %}
-        <div class="col-12">
-          <button class="btn buttonForm" type="submit">
-            Submit
-          </button>
         </div>
           
       </section>
@@ -335,51 +332,51 @@
                 <div class="input-box row frameworks">
                     <label class="skill_title">Frameworks</label>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks"  value="Nodejs" >
+                        <input type="checkbox" name="nodejs" value="Nodejs" >
                         <label for="nodejs"> Nodejs</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Flask">
+                        <input type="checkbox" name="Flask" value="Flask">
                         <label for="Flask">Flask</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Django">
+                        <input type="checkbox" name="Django" value="Django">
                         <label for="Django">Django</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks"value="React">
+                        <input type="checkbox" name="React" value="React">
                         <label for="React">React</label><br>
                     </div>
                         <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Express">
+                        <input type="checkbox" name="Express" value="Express">
                         <label for="Express">Express</label><br>
                     </div>
                         <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Vue.js">
+                        <input type="checkbox" name="Vue.js" value="Vue.js">
                         <label for="Vue.js">Vue.js</label><br>
                     </div>
                         <div class="col-3">
-                        <input type="checkbox" name="Frameworks"value="Angular">
+                        <input type="checkbox" name="Angular" value="Angular">
                         <label for="Angular">Angular</label><br>
                     </div>
                         <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Bootstrap">
+                        <input type="checkbox" name="Bootstrap" value="Bootstrap">
                         <label for="Bootstrap">Bootstrap</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Nodejs" >
+                        <input type="checkbox" name="nodejs" value="Nodejs" >
                         <label for="nodejs"> Nodejs</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Flask">
+                        <input type="checkbox" name="Flask" value="Flask">
                         <label for="Flask">Flask</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="Django">
+                        <input type="checkbox" name="Django" value="Django">
                         <label for="Django">Django</label><br>
                     </div>
                     <div class="col-3">
-                        <input type="checkbox" name="Frameworks" value="React">
+                        <input type="checkbox" name="React" value="React">
                         <label for="React">React</label><br>
                     </div>
                 </div>
@@ -492,25 +489,23 @@
                     <div class="col-md-4 prev">
                       <button>previous</button>
                     </div>
+            
+                    {% comment %} <div class="col-md-4 offset-md-4 next">
+                      <button><a href="#">Submit</a></button>
+                    </div> {% endcomment %}
+            
+                   
                   </div>
             </div>   
               </div>
         </div>
        
     </section>
-    {% comment %} ------------------------------------------------------------------ {% endcomment %}
-
-
-    
-
-     
-    {% comment %} ------------------------------------------------------------------ {% endcomment %}
 
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="{% static 'main.js' %}"></script>
 
-
-</body>
+  </body>
 
 </html>
