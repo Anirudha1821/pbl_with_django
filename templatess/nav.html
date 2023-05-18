@@ -34,14 +34,17 @@
                 
                 {% comment %} {{request.path}} {% endcomment %}
                 <li class= "{% if request.path == '' %} active {% endif %}" > <a href="/home">Home</a></li>
-                <li class= "{% if request.path == '/about' %} active {% endif %}"><a href="/about">About</a></li>
-                <li class= "{% if request.path == '/temps' %} active {% endif %}"><a href="/temps">Templates</a></li>
-                <li class= "{% if request.path == '/tempmenu' %} active {% endif %}"><a href="/tempmenu">Template-Menu</a></li>
-                <li class= "{% if request.path == '/form' %} active {% endif %}"><a href="/form">Info-Form</a></li>
-                <li class= "{% if request.path == '/resume' %} active {% endif %}"><a href="/resume">Resume</a></li>
-                <li class= "{% if request.path == '/base' %} active {% endif %}"><a href="/base">Base</a></li>
+                <li class= "{% if request.path == '/tempmenu' %} active {% endif %}"><a href="/tempmenu">Template-Menus</a></li>
+                <li class= "{% if request.path == '/newform' %} active {% endif %}"><a href="/newform">Form</a></li>
+                {% comment %} <li class= "{% if request.path == '/resume' %} active {% endif %}"><a href="/resume">Resume</a></li> {% endcomment %}
+                <li class= "{% if request.path == '/carrer_center' %} active {% endif %}"><a href="/carrer_center">Carrer Center</a></li>
+                <li class= "{% if request.path == '/aboutus' %} active {% endif %}"><a href="/aboutus">About Us</a></li> 
                 <li class= "{% if request.path == '/contact' %} active {% endif %}"><a href="/contact">Contact</a></li>
-            </ul>
+                <li class= "{% if request.path == '/base' %} active {% endif %}"><a href="/login">Login</a></li>                
+                <li class= "{% if request.path == '/base' %} active {% endif %}"><a href="/logout">Logout</a></li>                
+
+            </ul>               
+
             <h1 class="logo">RB</h1>
         </div>
     </nav>  

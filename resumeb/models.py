@@ -2,7 +2,6 @@ from django.db import models
 from django.db import IntegrityError, models, router, transaction
 
 
-# Create your models here.
 class Forms(models.Model):
     myname = models.CharField(max_length=32)
     lname = models.CharField(max_length=32)
@@ -15,7 +14,6 @@ class Forms(models.Model):
 
 
 class F(models.Model):
-    # try:
     dname = models.CharField(
         max_length=32, default="aj", null=True)
     dsurname = models.CharField(
@@ -49,5 +47,7 @@ class F(models.Model):
         max_length=323, default="aj", null=True)
     dmonth = models.CharField(
         max_length=323, default="aj", null=True)
-    # except IntegrityError:
-    #     pass
+
+class checkbox(models.Model):
+    userskills=models.CharField(max_length=300)
+    

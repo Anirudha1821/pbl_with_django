@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect
 from resumeb.models import Forms
 from resumeb.models import F
+from resumeb.models import checkbox 
 # above is imp
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -11,19 +12,176 @@ from django.contrib.auth import login
 
 def indexreq(request):
     return render(request, 'index.html')
+def home(request):
+    return render(request, 'index.html')
+def aboutus(request):
+    return render(request, 'aboutus.html')
+def resume1(request):
+        # print(formsData)
+
+    mdata = {}
+    # Above declaration is very imp
+    if request.method == "POST":
+        print("----------------------------------POST---------------------------------")
+        # print(formsData)
+        # if request.POST.get('userskills'):
+        #     savadata=checkbox()
+        #     savadata.userskills=request.POST.get('userskills')
+        #     savadata.save()
+        
+        # dname = request.POST.get('dname')
+        # dsurname = request.POST.get('dsurname')
+        # dphoneno = request.POST.get('dphoneno')
+        # demail = request.POST.get('demail')
+        # dcountry = request.POST.get('dcountry')
+        # dcity = request.POST.get('dcity')
+        # desc = request.POST.get('desc')
+        # dpincode = request.POST.get('dpincode')
+        # dcompany = (request.POST.get('dcompany'))
+        # dschool = (request.POST.get('dschool'))
+        # dcollege = (request.POST.get('dcollege'))
+        # ddegree = (request.POST.get('ddegree'))
+        # dmonth = (request.POST.get('dmonth'))
+        # dposition = (request.POST.get('dposition'))
+        # dc1 = (request.POST.get('dc1'))
+        # dcc1 = (request.POST.get('dcc1'))
+        # dm1 = (request.POST.get('dm1'))
+        # dm2 = (request.POST.get('dm2'))
+        # myF = F(dname=dname, dsurname=dsurname, dphoneno=dphoneno, demail=demail,
+        #         dcountry=dcountry, dcity=dcity, desc=desc, dpincode=dpincode, dschool=dschool, dcollege=dcollege,
+        #         ddegree=ddegree, dmonth=dmonth, dposition=dposition, dc1=dc1, dcc1=dcc1, dm1=dm1, dm2=dm2, dcompany=dcompany)
+        # myF.save()
+        # messages.success(request, "Your form submitted succesfully.")
+        mdname = (request.POST.get('dname'))
+        mdsurname = (request.POST.get('dsurname'))
+        mdphoneno = (request.POST.get('dphoneno'))
+        mdemail = (request.POST.get('demail'))
+        mdesc = (request.POST.get('desc'))
+        mdcountry = (request.POST.get('dcountry'))
+        mdcity = (request.POST.get('dcity'))
+        mdpincode = (request.POST.get('dpincode'))
+        mdschool = (request.POST.get('dschool'))
+        mdcollege = (request.POST.get('dcollege'))
+        mddegree = (request.POST.get('ddegree'))
+        mdmonth = (request.POST.get('dmonth'))
+        mdposition = (request.POST.get('dposition'))
+        mdcompany = (request.POST.get('dcompany'))
+        mdc1 = (request.POST.get('dc1'))
+        mdcc1 = (request.POST.get('dcc1'))
+        mdm1 = (request.POST.get('dm1'))
+        mdm2 = (request.POST.get('dm2'))
+        mdata = {
+            'mdname': mdname,
+            'mdsurname': mdsurname,
+            'mdphoneno': mdphoneno,
+            'mdemail': mdemail,
+            'mdcountry': mdcountry,
+            'mdcity': mdcity,
+            'mdesc': mdesc,
+            'mdpincode': mdpincode,
+            'mdcompany': mdcompany,
+            'mdschool': mdschool,
+            'mdcollege': mdcollege,
+            'mddegree': mddegree,
+            'mdmonth': mdmonth,
+            'mdposition': mdposition,
+            'mdc1': mdc1,
+            'mdcc1': mdcc1,
+            'mdm1': mdm1,
+            'mdm2': mdm2,
+        }
+    return render(request, 'resume1.html',mdata)
+def resume2(request):
+        # print(formsData)
+
+    mdata = {}
+    # Above declaration is very imp
+    if request.method == "POST":
+        print("----------------------------------POST---------------------------------")
+        # print(formsData)
+        # if request.POST.get('userskills'):
+        #     savadata=checkbox()
+        #     savadata.userskills=request.POST.get('userskills')
+        #     savadata.save()
+        
+        # dname = request.POST.get('dname')
+        # dsurname = request.POST.get('dsurname')
+        # dphoneno = request.POST.get('dphoneno')
+        # demail = request.POST.get('demail')
+        # dcountry = request.POST.get('dcountry')
+        # dcity = request.POST.get('dcity')
+        # desc = request.POST.get('desc')
+        # dpincode = request.POST.get('dpincode')
+        # dcompany = (request.POST.get('dcompany'))
+        # dschool = (request.POST.get('dschool'))
+        # dcollege = (request.POST.get('dcollege'))
+        # ddegree = (request.POST.get('ddegree'))
+        # dmonth = (request.POST.get('dmonth'))
+        # dposition = (request.POST.get('dposition'))
+        # dc1 = (request.POST.get('dc1'))
+        # dcc1 = (request.POST.get('dcc1'))
+        # dm1 = (request.POST.get('dm1'))
+        # dm2 = (request.POST.get('dm2'))
+        # myF = F(dname=dname, dsurname=dsurname, dphoneno=dphoneno, demail=demail,
+        #         dcountry=dcountry, dcity=dcity, desc=desc, dpincode=dpincode, dschool=dschool, dcollege=dcollege,
+        #         ddegree=ddegree, dmonth=dmonth, dposition=dposition, dc1=dc1, dcc1=dcc1, dm1=dm1, dm2=dm2, dcompany=dcompany)
+        # myF.save()
+        # messages.success(request, "Your form submitted succesfully.")
+        mdname = (request.POST.get('dname'))
+        mdsurname = (request.POST.get('dsurname'))
+        mdphoneno = (request.POST.get('dphoneno'))
+        mdemail = (request.POST.get('demail'))
+        mdesc = (request.POST.get('desc'))
+        mdcountry = (request.POST.get('dcountry'))
+        mdcity = (request.POST.get('dcity'))
+        mdpincode = (request.POST.get('dpincode'))
+        mdschool = (request.POST.get('dschool'))
+        mdcollege = (request.POST.get('dcollege'))
+        mddegree = (request.POST.get('ddegree'))
+        mdmonth = (request.POST.get('dmonth'))
+        mdposition = (request.POST.get('dposition'))
+        mdcompany = (request.POST.get('dcompany'))
+        mdc1 = (request.POST.get('dc1'))
+        mdcc1 = (request.POST.get('dcc1'))
+        mdm1 = (request.POST.get('dm1'))
+        mdm2 = (request.POST.get('dm2'))
+        mdata = {
+            'mdname': mdname,
+            'mdsurname': mdsurname,
+            'mdphoneno': mdphoneno,
+            'mdemail': mdemail,
+            'mdcountry': mdcountry,
+            'mdcity': mdcity,
+            'mdesc': mdesc,
+            'mdpincode': mdpincode,
+            'mdcompany': mdcompany,
+            'mdschool': mdschool,
+            'mdcollege': mdcollege,
+            'mddegree': mddegree,
+            'mdmonth': mdmonth,
+            'mdposition': mdposition,
+            'mdc1': mdc1,
+            'mdcc1': mdcc1,
+            'mdm1': mdm1,
+            'mdm2': mdm2,
+        }
+    return render(request, 'resume2.html',mdata)
 
 
 def mytemp(request):
     # return HttpResponse("This is home page")
     return render(request, 'mytemp.html')
+def options(request):
+    # return HttpResponse("This is home page")
+    return render(request, 'options.html')
 
 
 def about(request):
     return render(request, 'about.html')
 
 
-def temps(request):
-    return render(request, 'tempmenu.html')
+def carrer_center(request):
+    return render(request, 'carrer_center.html')
 
 
 def contact(request):
@@ -93,6 +251,10 @@ def submitf(request):
 
 
 def newform(request):
+    
+    reqa={}
+    tempmenuname=request.POST.get('tempmenuname',None)
+    reqa['tempmenuname']=tempmenuname 
 
     print("-----------------------------GET----------------------------")
     # formsData = F.objects.all()
@@ -103,7 +265,11 @@ def newform(request):
     if request.method == "POST":
         print("----------------------------------POST---------------------------------")
         # print(formsData)
-
+        if request.POST.get('userskills'):
+            savadata=checkbox()
+            savadata.userskills=request.POST.get('userskills')
+            savadata.save()
+        
         dname = request.POST.get('dname')
         dsurname = request.POST.get('dsurname')
         dphoneno = request.POST.get('dphoneno')
@@ -167,7 +333,9 @@ def newform(request):
         }
         print(mdata)
 
-    return render(request, 'newform.html', mdata)
+            
+
+    return render(request, 'newform.html',reqa)
 
 
 def newform1(request):
